@@ -1,0 +1,100 @@
+@import "../../styles/mixins.scss";
+
+.sidebar {
+    max-width: 394px;
+    min-width: 256px;
+    overflow: hidden;
+    width: 256px;
+
+    .directories {
+        list-style: none;
+        overflow: auto;
+        height: 65dvh;
+    }
+
+    .side-nav {
+
+        .add-new {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            position: relative;
+            margin-bottom: 2rem;
+        }
+
+        .sidebar-item {
+            margin: 1rem 0;
+            cursor: pointer;
+        }
+
+        .uploader-button {
+            font-size: 1rem;
+            border: 1px solid var(--border-color);
+            background: var(--white-color);
+
+            &:focus {
+                border: 1px solid var(--border-color);
+            }
+
+            &:focus-visible {
+                border: none;
+                outline: none;
+            }
+
+            svg {
+                font-size: 1rem;
+            }
+
+            cursor: pointer;
+            border-radius: 1rem;
+            display: flex;
+            gap :0.5rem;
+            align-items: center;
+            justify-content: center;
+            height: 3.5rem;
+            min-width: 6.25rem;
+            width: 100%;
+            font-weight: 500;
+            padding: 1.125rem 1.25rem 1.125rem 1rem;
+        }
+
+
+    }
+
+    .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        border: 1px solid var(--border-color);
+        background-color: var(--white-color);
+        width: 100%;
+        padding: 0.75rem 0;
+        list-style-type: none;
+        border-radius: 12px;
+
+        li {
+            padding: 8px 16px;
+            cursor: pointer;
+
+            svg {
+                font-size: 1.25rem;
+                margin-right: 0.5rem;
+            }
+
+            &:hover {
+                background-color: var(--gray-color);
+            }
+
+            input[type="file"] {
+                display: none;
+            }
+
+            label {
+                display: inline-flex;
+                align-items: center;
+
+                cursor: pointer;
+            }
+        }
+    }
+}

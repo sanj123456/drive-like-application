@@ -1,0 +1,20 @@
+@import "../../../styles/mixins.scss";
+
+.form-control {
+    width: 100%;
+
+    input {
+        border: 1.5px solid var(--border-color);
+        width: calc(100% - 2rem);
+        padding: 0.5rem;
+        border-radius: 4px;
+
+        &:focus {
+            border-color: var(--text-color);
+        }
+
+        &:focus-visible {
+            outline: none;
+        }
+    }
+}

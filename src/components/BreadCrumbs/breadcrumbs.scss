@@ -1,0 +1,13 @@
+@import "../../styles/mixins.scss";
+
+.breadcrumbs {
+    gap: 0.5rem;
+
+    span {
+        cursor: pointer;
+
+        &:nth-last-child(1) {
+            cursor: not-allowed;
+        }
+    }
+}
